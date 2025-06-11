@@ -27,7 +27,7 @@ const subscriptionSchema = new mongoose.Schema({
         enum: ["sports", "news", "entertainment", "lifestyle", "technology", "finance", "politics", "other"],
         required: true
     },
-    patmentMethod: {
+    paymentMethod: {
         type: String,
         required: true,
         trim: true
