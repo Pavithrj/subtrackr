@@ -22,7 +22,7 @@ const subscriptionSchema = new mongoose.Schema({
         type: String,
         enum: ["daily", "weekly", "monthly", "yearly"],
     },
-    catogery: {
+    category: {
         type: String,
         enum: ["sports", "news", "entertainment", "lifestyle", "technology", "finance", "politics", "other"],
         required: true
