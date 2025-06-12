@@ -7,8 +7,6 @@ authRouter.post("/sign-up", signUp);
 
 authRouter.post("/sign-up", signIn);
 
-authRouter.post("/sign-out", (req, res) => {
-    res.send({ title: "Sign Out" });
-});
+authRouter.post("/sign-up", signOut);
 
 export default authRouter;
