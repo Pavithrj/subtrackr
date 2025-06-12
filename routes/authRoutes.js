@@ -5,9 +5,7 @@ const authRouter = Router();
 
 authRouter.post("/sign-up", signUp);
 
-authRouter.post("/sign-in", (req, res) => {
-    res.send({ title: "Sign In" });
-});
+authRouter.post("/sign-up", signIn);
 
 authRouter.post("/sign-out", (req, res) => {
     res.send({ title: "Sign Out" });
