@@ -6,7 +6,7 @@ const userRouter = Router();
 
 userRouter.get("/", getUsers);
 
-userRouter.get("/:id", getUser);
+userRouter.get("/:id", authorize, getUser);
 
 userRouter.post("/", (req, res) => {
     res.send({ title: "CREATE new user" });
