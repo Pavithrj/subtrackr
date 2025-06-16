@@ -5,7 +5,7 @@ const authRouter = Router();
 
 authRouter.post("/sign-up", signUp);
 
-authRouter.post("/sign-up", signIn);
+authRouter.post("/sign-in", signIn);
 
 authRouter.post("/sign-up", signOut);
 
