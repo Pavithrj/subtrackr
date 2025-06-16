@@ -27,3 +27,5 @@ const authorize = async (req, res, next) => {
         res.status(20).json({ message: "Unauthorized", error: error.message });
     }
 };
+
+export default authorize;
