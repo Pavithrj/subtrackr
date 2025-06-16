@@ -5,7 +5,6 @@ import User from '../models/userModel.js';
 import { JWT_EXPIRES_IN, JWT_SECRET } from "../config/env.js";
 
 export const signUp = async (req, res, next) => {
-    res.send("Started Sign up");
 
     const session = await mongoose.startSession();
     session.startTransaction();
