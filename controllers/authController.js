@@ -36,7 +36,7 @@ export const signUp = async (req, res, next) => {
                 token,
                 user: newUsers[0]
             }
-        })
+        });
     } catch (error) {
         await session.abortTransaction();
         session.endSession();
