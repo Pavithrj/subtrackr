@@ -22,9 +22,7 @@ subscriptionRouter.delete("/:id", (req, res) => {
     res.send({ title: "DELETE subscription" });
 });
 
-subscriptionRouter.get("/user/:id", (req, res) => {
-    res.send({ title: "GET all user subscription" });
-});
+subscriptionRouter.get("/user/:id", authorize);
 
 subscriptionRouter.put("/:id/cancel", (req, res) => {
     res.send({ title: "CANCEL subscription" });
