@@ -9,7 +9,7 @@ const subscriptionSchema = new mongoose.Schema({
         maxLength: 100
     },
     price: {
-        type: String,
+        type: Number,
         required: [true, "Subscription price is required"],
         min: [0, "Price must be greater than 0"],
     },
