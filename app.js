@@ -6,6 +6,7 @@ import subscriptionRouter from "./routes/subscriptionRoutes.js";
 import connectToDatabase from "./database/mongodb.js";
 import errorMiddleware from "./middlewares/errorMiddleware.js";
 import { PORT } from "./config/env.js";
+import arcjetMiddleware from "./middlewares/arcjetMiddleware.js";
 
 const app = express();
 
