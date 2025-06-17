@@ -2,7 +2,7 @@ import Subscription from "../models/subscriptionModel";
 
 export const createSubscription = async (req, res, next) => {
     try {
-        const subscription = await subscription.create({
+        const subscription = await Subscription.create({
             ...req.body,
             user: req.user._id
         });
