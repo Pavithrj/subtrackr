@@ -12,9 +12,7 @@ subscriptionRouter.get("/:id", (req, res) => {
     res.send({ title: "GET subscription details" });
 });
 
-subscriptionRouter.post("/", authorize, (req, res) => {
-    res.send({ title: "CREATE subscription" });
-});
+subscriptionRouter.post("/", authorize, createSubscription);
 
 subscriptionRouter.put("/:id", (req, res) => {
     res.send({ title: "UPDATE subscription" });
