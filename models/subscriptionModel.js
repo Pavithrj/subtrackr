@@ -63,7 +63,7 @@ const subscriptionSchema = new mongoose.Schema({
     }
 }, { timestamps: true });
 
-subscriptionSchema.pre("save", (next) => {
+subscriptionSchema.pre("save", function (next) => {
     if (!this.renewalDate) {
         const renewalPeriods = {
             daily: 1,
