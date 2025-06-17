@@ -1,4 +1,4 @@
-import subscription from "../models/subscriptionModel";
+import Subscription from "../models/subscriptionModel";
 
 export const createSubscription = async (req, res, next) => {
     try {
