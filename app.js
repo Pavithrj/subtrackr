@@ -1,4 +1,4 @@
-import express from "express";
+import express from 'express';
 import cookieParser from "cookie-parser";
 import userRouter from "./routes/userRoutes.js";
 import authRouter from "./routes/authRoutes.js";
