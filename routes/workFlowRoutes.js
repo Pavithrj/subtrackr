@@ -5,3 +5,4 @@ const workflowRouter = Router();
 
 workflowRouter.get("/", sendReminders);
 
+export default workflowRouter;
