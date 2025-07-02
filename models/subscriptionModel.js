@@ -20,7 +20,7 @@ const subscriptionSchema = new mongoose.Schema({
     },
     frequency: {
         type: String,
-        enum: ["daily", "weekly", "monthly", "yearly"],
+        enum: ["daily", "weekly", "monthly", "yearly"]
     },
     category: {
         type: String,
