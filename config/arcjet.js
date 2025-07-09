@@ -18,7 +18,7 @@ const aj = arcjet({
             interval: 10,
             capacity: 10
         })
-    ],
+    ]
 });
 
 export default aj;
