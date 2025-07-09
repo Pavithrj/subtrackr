@@ -17,7 +17,7 @@ const aj = arcjet({
             refillRate: 5,
             interval: 10,
             capacity: 10
-        }),
+        })
     ],
 });
 
