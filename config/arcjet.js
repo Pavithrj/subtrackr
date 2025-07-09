@@ -10,7 +10,7 @@ const aj = arcjet({
             mode: "LIVE",
             allow: [
                 "CATEGORY:SEARCH_ENGINE"
-            ],
+            ]
         }),
         tokenBucket({
             mode: "LIVE",
