@@ -10,7 +10,7 @@ export const sendReminders = serve(async (context) => {
     const { subscriptionId } = context.requestPayload;
     const subscription = await fetchSubscription(context, subscriptionId);
 
-    if (!subscription || subscription.staus != active) return;
+    if (!subscription || subscription.status != active) return;
 
     const renewalDate = dayjs(subscription.renewalDate);
 
@@ -20,28 +20,28 @@ export const sendReminders = serve(async (context) => {
     }
 
     for (const daysBefore of REMINDERS) {
-        const renewalDate = renewalDate.substract(daysBefore, "day");
+        const renewalDate = renewalDate.subtract(daysBefore, "day");
 
         if (renewalDate.isAfter(dayjs())) {
-            await sleepUnitReminnder(context, `Reminder ${daysBefore} days before`, reminderDate);
+            await sleepUnitReminder(context, `Reminder ${daysBefore} days before`, reminderDate);
         }
 
-        await triggerReminnder(context, `Reminder ${daysBefore} days before`);
+        await triggerReminder(context, `Reminder ${daysBefore} days before`);
     }
 });
 
 const fetchSubscription = async (context, subscriptionId) => {
-    return await context.run("get subcription", () => {
+    return await context.run("get subscription", () => {
         return Subscription.findById(subscriptionId).populate("user", "name email");
     });
 };
 
-const sleepUnitReminnder = async (context, label, reminderDate) => {
+const sleepUnitReminder = async (context, label, reminderDate) => {
     console.log(`Sleeping until ${label} reminder at ${reminderDate}`);
     await context.sleepUntil(label, reminderDate.toDate());
 };
 
-const triggerReminnder = async (context, label) => {
+const triggerReminder = async (context, label) => {
     return await context.run(label, () => {
         console.log(`Triggering ${label} reminder`);
     });
